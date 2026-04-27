@@ -90,10 +90,41 @@ const Hero = () => {
       </div>
 
       <div className={`max-w-4xl mx-auto text-center relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="mb-6">
-          <span className="inline-block px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full text-teal-400 text-sm font-medium mb-6 animate-fadeIn">
+        <div className="mb-6 flex flex-wrap justify-center gap-3">
+          <span className="inline-block px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full text-teal-400 text-sm font-medium animate-fadeIn">
             👋 Welcome to my Portfolio
           </span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium animate-fadeIn">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            Available for Hire
+          </span>
+        </div>
+
+        {/* Profile Photo */}
+        <div className="mb-8 flex justify-center">
+          <div className="relative group">
+            {/* Outer rotating dashed ring */}
+            <div className="absolute -inset-4 rounded-full border-2 border-dashed border-teal-500/30 animate-spin-slow"></div>
+            
+            {/* Glowing gradient ring */}
+            <div className="absolute -inset-1.5 bg-gradient-to-r from-teal-400 via-cyan-300 to-teal-500 rounded-full opacity-50 group-hover:opacity-100 blur-md transition-all duration-700 animate-gradient"></div>
+            
+            {/* Solid gradient border ring */}
+            <div className="absolute -inset-1 bg-gradient-to-tr from-teal-400 via-cyan-400 to-teal-500 rounded-full animate-gradient"></div>
+            
+            {/* Image */}
+            <img
+              src="/profile.jpg"
+              alt="Sachin Singh"
+              className="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover object-top border-[3px] border-gray-900 shadow-2xl shadow-teal-500/30 group-hover:scale-105 transition-transform duration-500"
+            />
+            
+            {/* Online status dot */}
+            <span className="absolute bottom-2 right-2 w-4 h-4 bg-emerald-400 border-2 border-gray-900 rounded-full animate-pulse"></span>
+          </div>
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">

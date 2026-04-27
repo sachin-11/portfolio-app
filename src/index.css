@@ -90,6 +90,59 @@
     animation: gradient 3s ease infinite;
   }
 
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+
+  /* Smooth reveal for sections */
+  @keyframes revealUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-revealUp {
+    animation: revealUp 0.8s ease-out forwards;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #14b8a6, #06b6d4);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #2dd4bf, #22d3ee);
+  }
+
+  /* Selection color */
+  ::selection {
+    background: rgba(20, 184, 166, 0.3);
+    color: #fff;
+  }
+
   /* Line clamp utility */
   .line-clamp-1 {
     display: -webkit-box;
