@@ -8,73 +8,89 @@ const Experience = () => {
     {
       company: "Moon Technolabs",
       location: "Ahmedabad",
-      position: "Sr. Node JS Developer",
+      position: "Senior Full Stack & AI Developer (GenAI + System Design)",
       period: "07/2023 - Present",
-      achievements: [
-        "Working as a Backend Developer for Seekrz, a live mobile application available on both App Store and Play Store, designed for users and store owners across multiple locations",
-        "Responsible for entire backend architecture and API development using Node.js, including client communication and technical discussions",
-        "Designed and developed a key feature where one store can send a trade offer and another store can accept or reject it; integrated multiple cron jobs to automate trade handling (e.g., auto-cancel after 48 hours if not accepted)",
-        "Implemented various payment integrations including Stripe, ACH direct debits, Apple Pay, and Cash Pay to enable seamless financial transactions",
-        "Developed bulk order functionality and ensured high-performance API responses under heavy loads",
-        "Built backend logic to support trade-related workflows, notification systems, and user/store authentication",
-        "Also contributed to Austin Indian, a community platform to help Indians in Austin, Texas find local Indian restaurants easily – developed complete backend APIs to support search and filtering",
-        "Developed backend APIs for a Speech Therapy Medical Application using NestJS, focusing on secure patient data handling, appointment scheduling, and session management"
+      projects: [
+        {
+          name: "AI Resume Coach & AI Interview Agent — GenAI SaaS Platform",
+          achievements: [
+            "Architected AI Resume Coach — production SaaS on AWS Amplify; multi-tenant PostgreSQL schema, RBAC, Stripe billing (Free/Pro/Enterprise), webhook integrations, and GDPR compliance",
+            "Implemented RAG pipeline: resume text chunked, embedded via OpenAI text-embedding-3-small, stored in Pinecone vector DB — enabling context-aware personalized interview questions",
+            "Applied GenAI across 6 features: interview question generation, real-time follow-ups, feedback scoring, ATS resume matching, STT spelling correction, and Text-to-SQL natural language DB queries",
+            "Integrated OpenAI GPT-4o-mini (primary) + Groq LLaMA-3.3-70b (auto-fallback); built real-time AI interview engine with STT, TTS, voice auto-submit, and AI proctoring system",
+            "Built bulk campaign system: CSV import, candidate comparison, recruiter notes, interview retake, S3 audio recording; optimized token usage by 50% via prompt compression",
+          ]
+        },
+        {
+          name: "Seekrz, Austin Indian & Speech Therapy App — Node.js / NestJS",
+          achievements: [
+            "Led entire backend architecture for Seekrz — live mobile app on App Store & Play Store for users and store owners across multiple locations",
+            "Designed trade offer feature with cron job automation (auto-cancel after 48 hours); implemented Stripe, ACH direct debits, Apple Pay, and Cash Pay payment integrations",
+            "Developed bulk order functionality ensuring high-performance API responses under heavy loads; built notification systems and user/store authentication",
+            "Contributed to Austin Indian — community platform for Indians in Austin, Texas; developed complete backend APIs for restaurant search and filtering",
+            "Built backend APIs for Speech Therapy Medical Application using NestJS — secure patient data handling, appointment scheduling, and session management",
+          ]
+        }
       ]
     },
     {
       company: "ManekTech",
       location: "Ahmedabad",
-      position: "Software Engineer (MERN)",
+      position: "Software Engineer (MERN Stack)",
       period: "11/2021 - 05/2023",
-      achievements: [
-        "Handled complete backend development for Cellcast, an Australia-based project focused on bulk SMS communication and client engagement solutions",
-        "Developed and maintained robust APIs for sending and managing bulk SMS campaigns, ensuring high reliability and delivery speed",
-        "Integrated Stripe Payment Gateway for handling top-ups and subscription billing, enabling smooth and secure financial transactions",
-        "Designed and implemented systems to manage SMS credits, user balances, and transactional logging, ensuring full transparency for users",
-        "Collaborated closely with cross-functional teams to ensure seamless feature development, bug resolution, and deployment",
-        "Actively participated in client calls and requirement discussions to understand business needs and provide optimal backend solutions",
-        "Applied innovative backend strategies to optimize performance, reduce costs, and enhance platform scalability"
+      projects: [
+        {
+          name: "Cellcast — Bulk SMS Communication Platform (Australia)",
+          achievements: [
+            "Led backend development for Cellcast — bulk SMS communication platform; built APIs handling high-volume SMS campaigns with reliability and delivery speed",
+            "Integrated Stripe Payment Gateway for top-ups and subscription billing; designed SMS credits, user balances, and transactional logging systems",
+            "Collaborated with cross-functional teams; participated in client calls to gather requirements and deliver optimal backend solutions",
+            "Applied backend optimization strategies to reduce costs and enhance platform scalability",
+          ]
+        }
       ]
     },
     {
       company: "Crest Infosystems Pvt. Ltd",
       location: "Surat",
-      position: "Software Engineer (Node Js)",
+      position: "Software Engineer (Node.js)",
       period: "01/2021 - 10/2021",
-      achievements: [
-        "Worked as a Backend Developer, solely responsible for backend architecture, API development, and client communication",
-        "Developed and implemented a revenue generation strategy through Facebook integration, similar to the Udemy model for selling online courses",
-        "Built the platform from scratch using Node.js, including the creation of APIs for course management, mastermind modules, and agency features",
-        "Designed and implemented a comprehensive agency module to streamline and centralize key functionalities, improving overall performance",
-        "Developed secure authentication and authorization mechanisms using JWT, allowing safe user access and storing session data",
-        "Integrated Twilio API for seamless SMS-based communication between the platform and its users",
-        "Used Node-Cron for automated scheduling, including activation and deactivation of membership accounts",
-        "Applied MongoDB Aggregation Pipelines to manipulate and deliver complex API responses efficiently",
-        "Regularly interacted with clients through calls and meetings to gather requirements, provide progress updates, and deliver customized solutions"
+      projects: [
+        {
+          name: "Online Course Platform (Udemy Model)",
+          achievements: [
+            "Built online course platform from scratch using Node.js — APIs for course management, mastermind modules, agency features, and Facebook-based revenue integration",
+            "Developed JWT-based authentication, Twilio SMS integration, Node-Cron scheduling, and MongoDB Aggregation Pipelines for complex data operations",
+          ]
+        }
       ]
     },
     {
       company: "EbizzInfotech Pvt Ltd",
       location: "Surat",
-      position: "Software Engineer (Node Js)",
+      position: "Software Engineer (Node.js)",
       period: "01/2019 - 12/2019",
-      achievements: [
-        "Independently handled a project, focusing on backend development and API creation",
-        "Designed and developed scalable and efficient backend APIs to support application functionality and performance",
-        "Conducted detailed analysis, data retrieval, and indexing to support business logic and enhance user experience",
-        "Collaborated with business analysts, developers, and technical teams to define optimal technical specifications",
-        "Focused on client requirements while designing and implementing backend logic and system architecture"
+      projects: [
+        {
+          name: null,
+          achievements: [
+            "Designed and developed scalable backend APIs; conducted data analysis, retrieval, and indexing to support business logic and enhance user experience",
+          ]
+        }
       ]
     },
     {
       company: "Dronstudy Pvt Ltd",
-      location: "Delhi, CA",
+      location: "Delhi",
       position: "Junior Software Engineer",
       period: "01/2018 - 12/2018",
-      achievements: [
-        "Worked as a Backend Developer using Node.js, responsible for building scalable and efficient APIs",
-        "Developed RESTful APIs to support live class functionality, ensuring smooth streaming and real-time communication",
-        "Collaborated closely with front-end developers and other IT team members to design and implement seamless system integrations"
+      projects: [
+        {
+          name: null,
+          achievements: [
+            "Built RESTful APIs using Node.js for live class functionality — smooth streaming and real-time communication; collaborated with front-end teams for seamless integrations",
+          ]
+        }
       ]
     }
   ]
@@ -136,7 +152,7 @@ const Experience = () => {
                 <div className="hidden md:block absolute left-0 top-6 w-4 h-4 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full border-4 border-gray-900 z-10"></div>
                 
                 <div className="md:ml-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 md:p-8 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-teal-500/20 hover:border-teal-500/40 hover:shadow-xl hover:shadow-teal-500/10 group">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-teal-400 transition-colors">
                         {exp.position}
@@ -164,17 +180,24 @@ const Experience = () => {
                     </div>
                   </div>
                   
-                  <ul className="space-y-3 mt-6">
-                    {exp.achievements.map((achievement, idx) => (
-                      <li 
-                        key={idx} 
-                        className="flex items-start text-gray-300 group/item hover:text-gray-200 transition-colors"
-                      >
-                        <span className="text-teal-400 mr-3 mt-1.5 flex-shrink-0 group-hover/item:scale-110 transition-transform">▸</span>
-                        <span className="leading-relaxed">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {exp.projects.map((project, pIdx) => (
+                    <div key={pIdx} className={pIdx > 0 ? 'mt-6 pt-6 border-t border-gray-700' : ''}>
+                      {project.name && (
+                        <h4 className="text-lg font-semibold text-cyan-400 mb-3 italic">{project.name}</h4>
+                      )}
+                      <ul className="space-y-3">
+                        {project.achievements.map((achievement, idx) => (
+                          <li 
+                            key={idx} 
+                            className="flex items-start text-gray-300 group/item hover:text-gray-200 transition-colors"
+                          >
+                            <span className="text-teal-400 mr-3 mt-1.5 flex-shrink-0 group-hover/item:scale-110 transition-transform">▸</span>
+                            <span className="leading-relaxed">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -186,4 +209,3 @@ const Experience = () => {
 }
 
 export default Experience
-

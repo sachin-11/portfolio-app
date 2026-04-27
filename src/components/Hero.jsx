@@ -105,16 +105,16 @@ const Hero = () => {
         <div className="h-12 md:h-16 mb-4">
           <TypingAnimation 
             texts={[
-              'Backend Developer',
-              'Node.js Expert',
-              'API Architect',
-              'Full Stack Engineer'
+              'Senior Full Stack Developer',
+              'AI & GenAI Engineer',
+              'System Design Expert',
+              'Node.js & NestJS Architect'
             ]}
           />
         </div>
         
         <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-          6+ years of expertise in <span className="text-teal-400 font-semibold">Node.js</span>, <span className="text-teal-400 font-semibold">NestJS</span>, and building <span className="text-teal-400 font-semibold">scalable APIs</span> that power millions of users
+          7+ years building scalable <span className="text-teal-400 font-semibold">Production APIs</span> & <span className="text-teal-400 font-semibold">SaaS Platforms</span> with expertise in <span className="text-teal-400 font-semibold">Generative AI</span>, <span className="text-teal-400 font-semibold">System Design</span>, and <span className="text-teal-400 font-semibold">AWS Cloud</span>
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

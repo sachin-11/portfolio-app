@@ -1,63 +1,88 @@
 [
   {
+    "name": "AI Resume Coach",
+    "description": "Production GenAI SaaS platform handling 1,000+ AI interviews/month. Features AI-powered interview preparation with real-time voice interaction, resume-based personalized questions via RAG pipeline, detailed feedback scoring, ATS resume matching, and bulk campaign management for recruiters.",
+    "technologies": ["Next.js 16", "OpenAI GPT-4o", "Groq LLaMA-3.3", "Pinecone", "PostgreSQL", "Prisma", "AWS Amplify", "Stripe", "TypeScript"],
+    "features": [
+      "RAG pipeline with Pinecone vector DB for context-aware personalized questions",
+      "Real-time AI interview engine with STT, TTS, voice auto-submit",
+      "AI proctoring system — face detection, tab switch monitoring, copy-paste detection",
+      "Bulk campaign system — CSV import, candidate comparison, recruiter notes",
+      "ATS resume matching against job descriptions with keyword analysis",
+      "Stripe billing with Free/Pro/Enterprise tiers and webhook integrations",
+      "Reduced AI token costs by 50% via prompt compression and intelligent LLM routing"
+    ],
+    "liveUrl": "https://resume-ai-coach.rasuonline.in"
+  },
+  {
+    "name": "PathLab — Online Pathology Lab",
+    "description": "Full-stack online pathology lab platform enabling patients to book diagnostic tests online, get home sample collection, and receive digital reports. Trusted by patients across India with 500+ tests, NABL accredited lab processes, and fast 24-48 hour report delivery.",
+    "technologies": ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "REST APIs"],
+    "features": [
+      "Online test booking with 500+ diagnostic tests and health packages",
+      "Home sample collection scheduling with trained agents",
+      "Digital report delivery within 24-48 hours",
+      "NABL accredited lab process integration",
+      "Patient dashboard for booking history and report downloads",
+      "Admin panel for managing tests, agents, and reports"
+    ],
+    "liveUrl": "https://lab.rasuonline.in"
+  },
+  {
     "name": "Seekrz",
-    "description": "A live mobile application available on both App Store and Play Store, designed for users and store owners across multiple locations. Features trade offers between stores, automated trade handling, and comprehensive payment integrations.",
+    "description": "Live mobile application on App Store & Play Store for users and store owners across multiple locations. Features trade offers between stores with automated handling, comprehensive payment integrations, and high-performance APIs under heavy loads.",
     "technologies": ["Node.js", "Stripe", "ACH", "Apple Pay", "Cron Jobs", "Real-time APIs"],
     "features": [
       "Trade offer system between stores with auto-cancel after 48 hours",
-      "Multiple payment gateway integrations (Stripe, ACH, Apple Pay, Cash Pay)",
-      "Bulk order functionality",
-      "High-performance APIs under heavy loads",
-      "Notification systems and authentication"
+      "4 payment gateway integrations (Stripe, ACH, Apple Pay, Cash Pay)",
+      "Bulk order functionality with high-performance APIs",
+      "Notification systems and user/store authentication",
+      "Cron job automation for trade handling workflows"
     ]
   },
   {
     "name": "Cellcast",
-    "description": "Australia-based project focused on bulk SMS communication and client engagement solutions. Enables businesses to send and manage bulk SMS campaigns with credit management and transactional transparency.",
+    "description": "Australia-based bulk SMS communication platform for client engagement. Handles high-volume SMS campaigns with credit management, Stripe payment integration for top-ups and subscriptions, and full transactional transparency.",
     "technologies": ["Node.js", "Stripe", "SMS Gateway", "Payment Integration", "Credit Management"],
     "features": [
-      "Bulk SMS campaign management",
+      "Bulk SMS campaign management with high reliability",
       "Stripe payment gateway for top-ups and subscriptions",
       "SMS credit and user balance management",
       "Transactional logging for full transparency",
-      "High reliability and delivery speed"
+      "Backend optimization for cost reduction and scalability"
     ]
   },
   {
-    "name": "Pondir",
-    "description": "Platform built from scratch using Node.js for online course management, similar to Udemy model. Features comprehensive agency module, mastermind modules, and Facebook integration for revenue generation.",
-    "technologies": ["Node.js", "JWT", "MongoDB", "Twilio", "Node-Cron", "MongoDB Aggregation"],
+    "name": "Speech Therapy Medical App",
+    "description": "Medical application built with NestJS for speech therapy services. Focuses on secure patient data handling, appointment scheduling, and session management with healthcare compliance standards.",
+    "technologies": ["NestJS", "Node.js", "TypeScript", "Secure Data Handling", "REST APIs"],
     "features": [
-      "Course management and mastermind modules",
-      "Comprehensive agency module",
-      "Secure JWT authentication and authorization",
-      "Twilio SMS integration",
-      "Automated membership activation/deactivation",
-      "Complex API responses using MongoDB Aggregation Pipelines"
-    ]
-  },
-  {
-    "name": "Speech Therapy Medical Application",
-    "description": "Medical application developed using NestJS focusing on secure patient data handling, appointment scheduling, and session management for speech therapy services.",
-    "technologies": ["NestJS", "Node.js", "Secure Data Handling", "Appointment Scheduling"],
-    "features": [
-      "Secure patient data handling",
-      "Appointment scheduling system",
-      "Session management",
-      "HIPAA-compliant architecture",
-      "Real-time communication features"
+      "Secure patient data handling with healthcare compliance",
+      "Appointment scheduling and session management",
+      "Real-time communication features",
+      "Role-based access control for doctors and patients"
     ]
   },
   {
     "name": "Austin Indian",
-    "description": "Community platform to help Indians in Austin, Texas find local Indian restaurants easily. Features comprehensive search and filtering capabilities to connect the Indian community with local businesses.",
+    "description": "Community platform helping Indians in Austin, Texas discover local Indian restaurants. Features comprehensive search, filtering, and location-based discovery to connect the Indian community with local businesses.",
     "technologies": ["Node.js", "REST APIs", "Search & Filter", "Location-based Services"],
     "features": [
       "Complete backend APIs for search and filtering",
       "Location-based restaurant discovery",
-      "Community-focused platform",
-      "Easy navigation for Indian community in Austin"
+      "Community-focused platform for Indians in Austin"
+    ]
+  },
+  {
+    "name": "Online Course Platform",
+    "description": "Platform built from scratch using Node.js for online course management, similar to Udemy model. Features comprehensive agency module, mastermind modules, and Facebook integration for revenue generation.",
+    "technologies": ["Node.js", "JWT", "MongoDB", "Twilio", "Node-Cron", "MongoDB Aggregation"],
+    "features": [
+      "Course management and mastermind modules",
+      "Agency module for centralized functionality",
+      "JWT authentication and Twilio SMS integration",
+      "Automated membership management with Node-Cron",
+      "MongoDB Aggregation Pipelines for complex queries"
     ]
   }
 ]
-

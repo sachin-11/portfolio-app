@@ -6,19 +6,44 @@ const About = () => {
   const sectionRef = useRef(null)
 
   const skills = [
-    { name: 'Node.js', level: 95 },
-    { name: 'NestJS', level: 90 },
-    { name: 'AWS', level: 85 },
-    { name: 'MongoDB', level: 90 },
-    { name: 'REST APIs', level: 95 },
-    { name: 'Payment Gateways', level: 90 },
-    { name: 'ReactJS', level: 80 },
-    { name: 'CI/CD', level: 85 },
-    { name: 'Real-time Communication', level: 88 },
-    { name: 'Stripe Integration', level: 92 }
+    { name: 'Node.js / NestJS / Next.js', level: 95 },
+    { name: 'GenAI / LLM (OpenAI, Groq, RAG)', level: 92 },
+    { name: 'System Design & Microservices', level: 90 },
+    { name: 'PostgreSQL / MongoDB / Redis', level: 90 },
+    { name: 'AWS (S3, RDS, Amplify, EC2)', level: 88 },
+    { name: 'REST APIs / GraphQL', level: 95 },
+    { name: 'Payment Gateways (Stripe, ACH)', level: 92 },
+    { name: 'React.js / TypeScript', level: 85 },
+    { name: 'Docker / CI/CD / GitHub Actions', level: 85 },
+    { name: 'WebSockets / Real-time Systems', level: 88 },
   ]
 
-  const techTags = ['Node.js', 'AWS', 'ReactJS', 'CI/CD', 'NestJS', 'MongoDB', 'Stripe', 'Payment Gateways', 'REST APIs', 'Real-time Communication', 'TypeScript', 'Docker', 'Redis', 'PostgreSQL']
+  const techCategories = [
+    {
+      label: 'Backend',
+      items: ['Node.js', 'NestJS', 'Next.js 16', 'Express.js', 'GraphQL', 'Python'],
+    },
+    {
+      label: 'GenAI / LLM',
+      items: ['OpenAI GPT-4o', 'Groq LLaMA-3.3', 'RAG', 'Pinecone', 'LangChain', 'Embeddings'],
+    },
+    {
+      label: 'System Design',
+      items: ['Microservices', 'Event-driven', 'API Gateway', 'Redis Cache', 'Message Queues', 'Load Balancing'],
+    },
+    {
+      label: 'Database',
+      items: ['PostgreSQL', 'MongoDB', 'Prisma ORM', 'Redis'],
+    },
+    {
+      label: 'Cloud / DevOps',
+      items: ['AWS S3', 'AWS RDS', 'Amplify', 'EC2', 'Docker', 'CI/CD', 'GitHub Actions'],
+    },
+    {
+      label: 'Other',
+      items: ['Stripe', 'WebSockets', 'Twilio', 'Cron Jobs', 'Proctoring', 'TypeScript'],
+    },
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -64,6 +89,24 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-teal-400 to-cyan-400 mx-auto rounded-full"></div>
         </div>
+
+        {/* Key Achievements - Stats Bar */}
+        <div 
+          className={`grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          style={{ transitionDelay: '100ms' }}
+        >
+          {[
+            { number: '7+', label: 'Years Experience' },
+            { number: '5+', label: 'Live Production Apps' },
+            { number: '1000+', label: 'AI Interviews/Month' },
+            { number: '50%', label: 'AI Cost Reduction' },
+          ].map((stat, i) => (
+            <div key={i} className="bg-gray-700/50 backdrop-blur-sm p-5 rounded-xl border border-teal-500/20 text-center hover:border-teal-500/40 transition-all duration-300 hover:scale-105">
+              <div className="text-3xl md:text-4xl font-bold text-teal-400 mb-1">{stat.number}</div>
+              <div className="text-gray-400 text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div 
@@ -72,22 +115,22 @@ const About = () => {
           >
             <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-xl border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Experienced Backend Developer with <strong className="text-teal-400">6+ years</strong> of expertise in designing, developing, and maintaining scalable APIs using Node.js and NestJS.
+                Senior Full Stack & AI Backend Developer with <strong className="text-teal-400">7+ years</strong> building scalable production APIs and SaaS platforms. Hands-on expertise in <strong className="text-teal-400">Generative AI</strong> (OpenAI, Groq, RAG pipelines, Pinecone) and <strong className="text-teal-400">System Design</strong>.
               </p>
             </div>
             <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-xl border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Proven ability to lead backend architecture for live production applications across industries including <strong className="text-teal-400">ecommerce, education, healthcare, and community platforms</strong>.
+                Delivered <strong className="text-teal-400">5+ live production applications</strong> across e-commerce, healthcare, education, and AI SaaS — including Seekrz, Cellcast, Austin Indian, Speech Therapy App, and AI Interview Agent.
               </p>
             </div>
             <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-xl border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Skilled in payment gateway integrations (Stripe, ACH, Apple Pay, Cash Pay), cron job automation, and real-time communication features. Strong client-facing experience with effective communication and problem-solving skills.
+                Built <strong className="text-teal-400">AI Resume Coach SaaS</strong> — production platform handling 1,000+ AI interviews/month with OpenAI + Groq LLM pipeline. Reduced AI token costs by <strong className="text-teal-400">50%</strong> through prompt compression and intelligent LLM routing.
               </p>
             </div>
             <div className="bg-gray-700/50 backdrop-blur-sm p-6 rounded-xl border border-teal-500/20 hover:border-teal-500/40 transition-all duration-300">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Successfully delivered high-impact projects like <strong className="text-teal-400">Seekrz, Cellcast (Australia), Pondir</strong>, and platforms for Indian communities and medical services. Recognized for both technical contribution and commitment to delivery timelines.
+                Implemented <strong className="text-teal-400">RAG pipeline</strong> with Pinecone vector DB for context-aware personalized question generation. Integrated <strong className="text-teal-400">4 payment gateways</strong> (Stripe, ACH, Apple Pay, Cash Pay) in a single production app with zero downtime.
               </p>
             </div>
           </div>
@@ -117,17 +160,24 @@ const About = () => {
             <div className="mb-8">
               <h3 className="text-2xl font-semibold mb-4 text-teal-400 flex items-center gap-2">
                 <span className="w-1 h-8 bg-gradient-to-b from-teal-400 to-cyan-400 rounded-full"></span>
-                Technologies
+                Tech Stack
               </h3>
-              <div className="flex flex-wrap gap-3">
-                {techTags.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-600 text-teal-300 rounded-lg font-medium hover:from-teal-600 hover:to-cyan-600 hover:text-white transition-all duration-300 hover:scale-105 cursor-default focus-visible-teal"
-                    tabIndex={0}
-                  >
-                    {tech}
-                  </span>
+              <div className="space-y-4">
+                {techCategories.map((cat, catIdx) => (
+                  <div key={catIdx}>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">{cat.label}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {cat.items.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1.5 bg-gradient-to-r from-gray-700 to-gray-600 text-teal-300 rounded-lg text-sm font-medium hover:from-teal-600 hover:to-cyan-600 hover:text-white transition-all duration-300 hover:scale-105 cursor-default"
+                          tabIndex={0}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -153,7 +203,7 @@ const About = () => {
                   <svg className="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  Graduated: July 2017
+                  Graduated: 2017
                 </p>
                 <div className="mt-4 pt-4 border-t border-gray-600">
                   <p className="text-gray-300 text-sm flex items-start gap-2">
@@ -171,5 +221,3 @@ const About = () => {
 }
 
 export default About
-
-
