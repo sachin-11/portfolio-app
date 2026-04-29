@@ -75,32 +75,43 @@ const Contact = () => {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
+    const FORMSPREE_ID = 'xrejzbkn'
+
     try {
-      // Using Formspree or similar service
-      // Replace with your form endpoint
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `Portfolio Contact: ${formData.subject}`,
+        }),
       })
 
-      if (response.ok) {
+      const result = await response.json()
+
+      if (response.ok && result.ok !== false) {
         setSubmitStatus('success')
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
-        throw new Error('Submission failed')
+        throw new Error(result?.errors?.[0]?.message || 'Submission failed')
       }
     } catch (error) {
-      // Fallback to mailto if form service fails
-      const mailtoLink = `mailto:rajeshsachin786@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
-      window.location.href = mailtoLink
+      console.error('Form error:', error)
+      // Fallback: direct mailto
+      const mailtoLink = `mailto:rajeshsachin786@gmail.com?subject=${encodeURIComponent(`Portfolio: ${formData.subject}`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`
+      window.open(mailtoLink, '_blank')
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
     } finally {
       setIsSubmitting(false)
-      setTimeout(() => setSubmitStatus(null), 5000)
+      setTimeout(() => setSubmitStatus(null), 6000)
     }
   }
 
@@ -220,17 +231,47 @@ const Contact = () => {
               </div>
 
               {submitStatus === 'success' && (
-                <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400">
-                  ✓ Message sent successfully! I'll get back to you soon.
+                <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 flex items-start gap-3">
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold">Message sent successfully!</p>
+                    <p className="text-sm text-green-400/80 mt-0.5">I'll get back to you at rajeshsachin786@gmail.com soon.</p>
+                  </div>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 flex items-start gap-3">
+                  <svg className="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p className="text-sm">Something went wrong. Please try emailing directly at rajeshsachin786@gmail.com</p>
                 </div>
               )}
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-3 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-teal-500/50 hover:shadow-xl hover:shadow-teal-500/50 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="w-full px-6 py-3 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg shadow-teal-500/50 hover:shadow-xl hover:shadow-teal-500/50 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
