@@ -1,16 +1,21 @@
 [
   {
     "name": "AI Resume Coach",
-    "description": "Production GenAI SaaS platform handling 1,000+ AI interviews/month. Features AI-powered interview preparation with real-time voice interaction, resume-based personalized questions via RAG pipeline, detailed feedback scoring, ATS resume matching, and bulk campaign management for recruiters.",
-    "technologies": ["Next.js 16", "OpenAI GPT-4o", "Groq LLaMA-3.3", "Pinecone", "PostgreSQL", "Prisma", "AWS Amplify", "Stripe", "TypeScript"],
+    "description": "Production GenAI SaaS platform handling 1,000+ AI interviews/month. Built with LangGraph multi-agent system (6 autonomous AI agents), real-time voice interview engine, 3-AI panel interviews, live code editor with AI review, RAG pipeline, and full recruiter automation suite. Dual AI provider strategy (Groq + OpenAI) with zero-interruption mid-session failover.",
+    "technologies": ["Next.js 16", "Python FastAPI", "LangGraph", "OpenAI GPT-4o", "Groq LLaMA-3.3", "Pinecone", "PostgreSQL", "Prisma", "AWS Amplify", "Stripe", "Monaco Editor", "TypeScript"],
     "features": [
-      "RAG pipeline with Pinecone vector DB for context-aware personalized questions",
-      "Real-time AI interview engine with STT, TTS, voice auto-submit",
-      "AI proctoring system — face detection, tab switch monitoring, copy-paste detection",
-      "Bulk campaign system — CSV import, candidate comparison, recruiter notes",
-      "ATS resume matching against job descriptions with keyword analysis",
-      "Stripe billing with Free/Pro/Enterprise tiers and webhook integrations",
-      "Reduced AI token costs by 50% via prompt compression and intelligent LLM routing"
+      "🎙️ AI Interview Engine — Real-time STT/TTS voice interviews with persona-based AI interviewers (Google style, Amazon LP, Strict, Friendly)",
+      "👥 3-AI Panel Interview — Technical AI + HR AI + Domain AI simultaneously in one chat session",
+      "💻 Pair Programming Mode — AI gives incomplete code stubs; Live Monaco/VS Code editor with AI code review (correctness, complexity, bugs)",
+      "📊 Real-time Confidence Analyzer — detects hesitant/confident/nervous tone after each answer",
+      "🎯 Adaptive Difficulty — AI adjusts question difficulty based on live performance; Progressive 3-level hint system with score penalty",
+      "🔍 Proctoring Suite — tab switch, face detection, noise detection, copy-paste monitoring, Video Presence Analysis (eye contact + body language via OpenAI Vision)",
+      "🤖 LangGraph Multi-Agent System — 6 autonomous agents: Resume Improvement (ATS ≥70 loop), Candidate Screening (live GitHub API), Learning Path, Panel Interview (3 AI judges), Market Intelligence (salary + demand), Interview Evaluator (contradiction detection)",
+      "📝 Job Application Agent — Gap analysis, custom cover letter (3 tones), resume auto-tailor to JD keywords, JD URL scraper, follow-up email templates, direct HR email via SMTP",
+      "🏢 Recruiter Suite — Bulk campaigns (CSV), ZIP resume upload (50 files), AI Job Match ranking, auto-shortlist pipeline, side-by-side candidate comparison, webhook integrations (Slack, Greenhouse, Lever, Workday)",
+      "🧠 RAG Pipeline — Pinecone vector DB, OpenAI text-embedding-3-small (1536 dims), pseudo-embedding fallback, context-aware question generation",
+      "⚡ AI Provider Strategy — Groq (primary, free+fast) → OpenAI auto-fallback on rate limit; zero interview interruption, admin email alert on switch",
+      "💳 Stripe billing — Free/Pro/Enterprise tiers, webhook integrations, 50% token cost reduction via prompt compression"
     ],
     "liveUrl": "https://resume-ai-coach.rasuonline.in"
   },

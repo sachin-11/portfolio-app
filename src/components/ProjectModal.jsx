@@ -61,11 +61,11 @@ const ProjectModal = ({ project, onClose }) => {
           {project.features && project.features.length > 0 && (
             <div>
               <h3 className="text-lg font-semibold text-teal-400 mb-3">Key Features</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {project.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start text-gray-300">
-                    <span className="text-teal-400 mr-3 mt-1">▸</span>
-                    <span>{feature}</span>
+                  <li key={idx} className="flex items-start text-gray-300 bg-gray-700/30 rounded-lg px-4 py-2.5 hover:bg-gray-700/50 transition-colors">
+                    <span className="text-teal-400 mr-3 mt-0.5 flex-shrink-0">▸</span>
+                    <span className="leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
