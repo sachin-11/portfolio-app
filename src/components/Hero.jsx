@@ -178,7 +178,7 @@ const Hero = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-6 mb-12">
           <a
-            href="https://github.com"
+            href="https://github.com/sachin-11"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-teal-400 transition-colors duration-200 hover:scale-110 transform"
@@ -189,7 +189,7 @@ const Hero = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sachin-singh-808930156/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-teal-400 transition-colors duration-200 hover:scale-110 transform"

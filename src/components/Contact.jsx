@@ -344,7 +344,7 @@ const Contact = () => {
               <h4 className="text-lg font-semibold text-teal-400 mb-4">Connect With Me</h4>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/sachin-11"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-700 hover:bg-teal-500 text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:scale-110"
@@ -355,7 +355,7 @@ const Contact = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/sachin-singh-808930156/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-700 hover:bg-teal-500 text-gray-400 hover:text-white rounded-lg transition-all duration-300 hover:scale-110"

@@ -41,7 +41,7 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Connect</h4>
             <div className="flex gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/sachin-11"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 bg-gray-800 hover:bg-teal-500/20 text-gray-400 hover:text-teal-400 rounded-lg transition-all duration-300"
@@ -52,7 +52,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sachin-singh-808930156/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 bg-gray-800 hover:bg-teal-500/20 text-gray-400 hover:text-teal-400 rounded-lg transition-all duration-300"
