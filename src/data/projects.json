@@ -20,6 +20,34 @@
     "liveUrl": "https://resume-ai-coach.rasuonline.in"
   },
   {
+    "name": "AI HR Policy Assistant",
+    "description": "Production-ready AI-powered HR Policy Assistant that answers employee queries using company policy documents. Implemented Agentic RAG with automatic query rewriting and document grading — the agent retries retrieval with improved queries when results are irrelevant, significantly improving answer accuracy.",
+    "technologies": ["FastAPI", "LangGraph", "OpenAI GPT-4o-mini", "Pinecone", "Next.js 14", "Tailwind CSS", "Docker", "Render", "Vercel"],
+    "features": [
+      "Agentic RAG pipeline with automatic query rewriting for improved retrieval accuracy",
+      "Document grading system that evaluates relevance before generating answers",
+      "Iterative retrieval — agent retries with improved queries when results are irrelevant",
+      "Company policy document ingestion and vector indexing via Pinecone",
+      "FastAPI backend with LangGraph agent orchestration",
+      "Deployed on Render (backend) + Vercel (frontend) with Docker containerization"
+    ],
+    "liveUrl": "https://hr-policy.rasuonline.in"
+  },
+  {
+    "name": "AI Prompt Optimizer",
+    "description": "AI-powered web app that analyzes, compresses, and optimizes long LLM prompts to reduce token cost while maintaining prompt quality. Features LangGraph-style multi-agent workflow for prompt analysis, compression, and review with support for multiple AI providers.",
+    "technologies": ["Next.js 15", "TypeScript", "React", "Redis", "BullMQ", "PostgreSQL", "Prisma", "OpenAI", "Anthropic", "Google Gemini", "Server-Sent Events"],
+    "features": [
+      "LangGraph-style multi-agent workflow for prompt analysis, compression, and review",
+      "Server-Sent Events (SSE) for real-time streaming progress updates",
+      "Redis + BullMQ background job queueing for async prompt processing",
+      "PostgreSQL + Prisma for prompt history and optimization cache persistence",
+      "Multi-provider AI support — OpenAI, Anthropic Claude, Google Gemini",
+      "Token cost reduction with quality preservation metrics"
+    ],
+    "liveUrl": "https://token.rasuonline.in"
+  },
+  {
     "name": "PathLab — Online Pathology Lab",
     "description": "Full-stack online pathology lab platform enabling patients to book diagnostic tests online, get home sample collection, and receive digital reports. Trusted by patients across India with 500+ tests, NABL accredited lab processes, and fast 24-48 hour report delivery.",
     "technologies": ["Next.js", "Node.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "REST APIs"],
