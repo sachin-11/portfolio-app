@@ -20,6 +20,19 @@
     "liveUrl": "https://resume-ai-coach.rasuonline.in"
   },
   {
+    "name": "Morning Briefing Agent",
+    "description": "Full-stack AI agent that automatically sends a personalized daily morning briefing email every day at 7 AM with real-time weather, top local news, calendar events, and important inbox highlights — all summarized by GPT-4o. Includes an Email Assistant that scans Gmail inbox, classifies emails as important/spam/normal using AI, and drafts smart replies on demand.",
+    "technologies": ["Next.js 14", "Tailwind CSS", "Python", "FastAPI", "OpenAI GPT-4o", "OpenWeatherMap", "NewsAPI", "Gmail SMTP/IMAP", "APScheduler", "Docker", "Render", "Vercel"],
+    "features": [
+      "Auto-runs daily at 7:00 AM via APScheduler background scheduler",
+      "Real-time weather + city-based news integration using OpenWeatherMap and NewsAPI",
+      "AI email classifier — labels inbox emails as important / normal / spam using GPT-4o",
+      "AI reply drafter — generates smart, context-aware replies for unread emails on demand",
+      "Deployed on Render (backend) + Vercel (frontend) with Docker containerization"
+    ],
+    "liveUrl": "https://morning-briefing-agent.rasuonline.in"
+  },
+  {
     "name": "AI HR Policy Assistant",
     "description": "Production-ready AI-powered HR Policy Assistant that answers employee queries using company policy documents. Implemented Agentic RAG with automatic query rewriting and document grading — the agent retries retrieval with improved queries when results are irrelevant, significantly improving answer accuracy.",
     "technologies": ["FastAPI", "LangGraph", "OpenAI GPT-4o-mini", "Pinecone", "Next.js 14", "Tailwind CSS", "Docker", "Render", "Vercel"],
