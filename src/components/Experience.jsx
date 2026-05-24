@@ -8,7 +8,8 @@ const Experience = () => {
     {
       company: "Moon Technolabs",
       location: "Ahmedabad",
-      position: "Senior Full Stack & AI Developer (GenAI + System Design)",
+      position: "Senior Full Stack & AI Engineer",
+      positionSubtitle: "GenAI | Agentic AI | System Design",
       period: "07/2023 - Present",
       projects: [
         {
@@ -154,9 +155,14 @@ const Experience = () => {
                 <div className="md:ml-16 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 md:p-8 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-teal-500/20 hover:border-teal-500/40 hover:shadow-xl hover:shadow-teal-500/10 group">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-teal-400 transition-colors">
+                      <h3 className="text-2xl font-semibold text-white mb-1 group-hover:text-teal-400 transition-colors">
                         {exp.position}
                       </h3>
+                      {exp.positionSubtitle && (
+                        <p className="text-sm font-medium text-teal-400/70 tracking-widest uppercase mb-2">
+                          {exp.positionSubtitle}
+                        </p>
+                      )}
                       <div className="flex items-center gap-3 flex-wrap">
                         <p className="text-xl text-teal-400 font-medium flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
