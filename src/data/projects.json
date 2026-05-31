@@ -20,6 +20,22 @@
     "liveUrl": "https://resume-ai-coach.rasuonline.in"
   },
   {
+    "name": "AI Web Scraper Agent",
+    "description": "Enterprise-grade AI web scraper that extracts structured data from any dynamic JavaScript website using async headless Playwright + GPT-4o-mini. Applies Semantic Selector Trimming to cut LLM token costs by 70%, downloads and compresses media assets via Pillow, and auto-compiles results into professionally styled Excel spreadsheets with embedded product thumbnails — all in under 5 seconds.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "FastAPI", "Python", "Playwright", "OpenAI GPT-4o-mini", "Pillow", "openpyxl", "pandas", "Docker", "Render"],
+    "features": [
+      "⚡ Async Concurrent Crawling — asyncio.gather() parallel browsers for 400–1000% faster multi-page scraping (5 pages in <4s)",
+      "✂️ Semantic Selector Trimming — strips headers/footers/nav/scripts before LLM call, cutting token costs by 50–70%",
+      "💾 Sub-5ms TTL Disk Cache — MD5 parameter hashing with 1-hour TTL; zero API tokens consumed on repeated requests",
+      "📊 Custom Excel Compiler — openpyxl styled sheets with freeze panes, zebra rows, branded headers, and embedded 80×80px product thumbnails",
+      "🤖 GPT-4o-mini Structured JSON Engine — strict JSON Schema output for reliable, field-accurate data extraction",
+      "🖼️ Pillow Image Pipeline — RGBA→RGB JPEG conversion, dynamic 500×500px downsizing, and compression before embedding",
+      "🔒 Double-Locked Gateway Security — async backend header-interceptor + glassmorphic frontend screen overlay"
+    ],
+    "liveUrl": "https://web.scrapping.rasuonline.in/",
+    "github": "https://github.com/sachin-11/web-scrapping-agent"
+  },
+  {
     "name": "Morning Briefing Agent",
     "description": "Full-stack AI agent that automatically sends a personalized daily morning briefing email every day at 7 AM with real-time weather, top local news, calendar events, and important inbox highlights — all summarized by GPT-4o. Includes an Email Assistant that scans Gmail inbox, classifies emails as important/spam/normal using AI, and drafts smart replies on demand.",
     "technologies": ["Next.js 14", "Tailwind CSS", "Python", "FastAPI", "OpenAI GPT-4o", "OpenWeatherMap", "NewsAPI", "Gmail SMTP/IMAP", "APScheduler", "Docker", "Render", "Vercel"],
